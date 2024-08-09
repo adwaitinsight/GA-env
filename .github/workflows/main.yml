@@ -5,10 +5,10 @@ jobs:
     runs-on:
       ubuntu-20.04
     env: 
-        MY_SQL_ROOT_PASSWORD: pa$$word
-        MY_SQL_DATABASE: mydb
-        MY_SQL_USER: userdb
-        MY_SQL_PASSWORD: pass
+        MYSQL_ROOT_PASSWORD: pa$$word
+        MYSQL_DATABASE: mydb
+        MYSQL_USER: userdb
+        MYSQL_PASSWORD: pass
         NEW_DATABASE: new_db
     services:
       db:
@@ -16,10 +16,10 @@ jobs:
         ports: 
           - 3306:3306
         env:
-          MY_SQL_ROOT_PASSWORD: ${{env.MY_SQL_ROOT_PASSWORD}}
-          MY_SQL_DATABASE: ${{env.MY_SQL_DATABASE}}
-          MY_SQL_USER: ${{env.MY_SQL_USER}}
-          MY_SQL_PASSWORD: ${{env.MY_SQL_PASSWORD}}
+          MYSQL_ROOT_PASSWORD: ${{env.MY_SQL_ROOT_PASSWORD}}
+          MYSQL_DATABASE: ${{env.MY_SQL_DATABASE}}
+          MYSQL_USER: ${{env.MY_SQL_USER}}
+          MYSQL_PASSWORD: ${{env.MY_SQL_PASSWORD}}
           NEW_DATABASE: ${{env.NEW_DATABASE}}
         options: >-
           --health-cmd "mysqladmin ping"
