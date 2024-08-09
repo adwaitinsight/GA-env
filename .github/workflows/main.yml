@@ -28,7 +28,7 @@ jobs:
           --health-retries 5
     steps:
       - name: show docker containers
-        run: docker ps-a
+        run: docker ps -a
       - name: wait for MYSQL to be ready
         run: |
           echo "waiting for mysql to be ready"
