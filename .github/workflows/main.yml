@@ -4,6 +4,7 @@ jobs:
   job_with_my_sql:
     runs-on:
       ubuntu-20.04
+      
     env: 
         MYSQL_ROOT_PASSWORD: pa$$word
         MYSQL_DATABASE: mydb
